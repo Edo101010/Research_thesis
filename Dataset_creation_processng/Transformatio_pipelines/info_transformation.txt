@@ -1,0 +1,2 @@
+The dataset of malware executable was converted in a safe VM. Only the digital artifact were extracted. The files in this folder
+contain the scripts used to convert the malware dataset.
