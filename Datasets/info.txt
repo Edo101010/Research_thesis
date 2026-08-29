@@ -1,0 +1,1 @@
+This folder contains only the image representation of malware created by a unified dataset. This includes both benign files and malware. No malware executables are provided.
