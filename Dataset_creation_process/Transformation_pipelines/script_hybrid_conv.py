@@ -23,7 +23,7 @@ os.makedirs(dst_mal, exist_ok=True)
 ben_files = os.listdir(src_ben)
 mal_files = os.listdir(src_mal)
 
-#________________________Hybrid____________________________
+#Hybrid
 def shannon_entropy(block):
     if len(block) == 0:
         return 0.0
@@ -32,7 +32,7 @@ def shannon_entropy(block):
     nonzero = probs[probs > 0]
     return -np.sum(nonzero * np.log2(nonzero))
     
-# 2. Compute normalized entropy sequence
+#2. Compute normalized entropy sequence
 
 def compute_entropy_sequence(data, block_size=256, stride=32):
     N = len(data)
@@ -60,7 +60,7 @@ def build_grayscale_image_simple(entropy_values):
     # return image
     return Image.fromarray(canvas, mode='L')
 
-#__________________Byte_____________________
+#Byte
 
 def choose_width(f_size_kb):
     idx = bisect.bisect_left(limits, f_size_kb)
@@ -80,15 +80,11 @@ def dynamic_width_binary_to_image(data, f_size_kb):
     
     img = Image.fromarray(img_array.astype(np.uint8), 'L')
     return img
-#______________________________ByteClass________
+#ByteClass
 
 def encode_byteclass(arr):
     """
-    Convert a NumPy array of bytes (0–255) into encoded values:
-      0 → 0
-      1–31, 127 → 255
-      32–126, 128–254 → 32
-      255 → 128
+    Convert a NumPy array of bytes (0–255) into encoded values
     """
     out = np.zeros_like(arr, dtype=np.uint8)
 
@@ -121,7 +117,6 @@ def dynamic_byteclass_to_image(data, f_size_kb):
     img = Image.fromarray(img_array.astype(np.uint8), 'L')
     
     return img
-#________________
 
 
 # Full pipeline
