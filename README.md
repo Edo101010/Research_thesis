@@ -7,4 +7,5 @@ The binary conversion, or Grayscale Byte Mapping (Baseline), functions by mappin
 The entropy-based conversion, or 2D Entropy Mapping, uses statistical entropy of byte sequences to represent local information complexity in image form, creating texture-rich images. In this study, this is achieved by computing the Shannon entropy formula for blocks of 256 bytes with a stride of 32. This array is then converted into a grayscale image.
 The Hybrid Mapping uses the previously mentioned encoding types as components for its representation. RGB images are composed of 3 channels, each representing a colour with an intensity between 0 and 255. The hybrid conversion simply uses the binary, entropy and byteclass mapping as single channels for the final RGB image. 
 
-![results.PNG](https://github.com/Edo101010/Research_thesis/blob/main/ImageRedame/results.PNG)
+<img src='https://github.com/Edo101010/Research_thesis/blob/main/ImageRedame/results.PNG' width=60%>
+
